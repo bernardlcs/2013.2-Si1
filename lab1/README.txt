@@ -1,1 +1,3 @@
-2 modificaçao do commit pra mesclar
+Teste de aqrquivo para fazer merge
+
+ja fes merge deste arquivo

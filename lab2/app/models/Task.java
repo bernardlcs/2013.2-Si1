@@ -1,12 +1,16 @@
 package models;
 
 import java.util.*;
-
+import play.*;
+import play.data.Form;
+import play.mvc.*;
+import play.data.validation.Constraints.*;
 
 public class Task {
 	
-	private Long id;
-	private String label;
+	public Long id;
+	@Required
+	public String label;
 	
 	public static List<Task> all(){
 		return new ArrayList<Task>();
@@ -19,5 +23,7 @@ public class Task {
 	public static void delete(Long id){
 		
 	}
+	
+	
 
 }

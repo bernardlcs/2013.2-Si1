@@ -20,9 +20,19 @@ public class Task extends Model{
 	@Required
 	public String tarefa;
 	
+	@Required
+	public String projeto;
+	
+	@Required
+	public String prioridade;
+	
+	
 	public static Finder<Long,Task> find = new Finder(Long.class, Task.class );
 	
 	public static List<Task> all(){
+		return find.all();
+	}
+	public static List<Task> tareCom(){
 		return find.all();
 	}
 	
@@ -32,6 +42,10 @@ public class Task extends Model{
 	
 	public static void delete(Long id){
 		find.ref(id).delete();
+	}
+	
+	public static void tarefaCompleta(Long id){
+		tareCom().add(find.ref(id));
 	}
 	
 	

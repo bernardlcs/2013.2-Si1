@@ -12,3 +12,7 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /tasks                      controllers.Application.tasks()
 POST    /tasks                      controllers.Application.newTasks()
 POST    /tasks/:id/delete           controllers.Application.deleteTask(id: Long)
+GET    /tarefa                      controllers.Application.visualisarTarefasCompletas()
+GET    /index                       controllers.Application.visualisarIndex()
+
+POST    /tarefa/:id/addtarefa        controllers.Application.jaFeitas(id: Long)
